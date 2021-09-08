@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- style -->
+    <link rel="stylesheet" href="app.css" />
+</head>
+
+<body>
+    <!-- app -->
+    <header>
+        <h1>Vue Course Goals</h1>
+    </header>
+    <section id="user-goal">
+        <h2>My Course Goal</h2>
+        <!-- <p v-html='setCourseGoals()'></p> -->
+        <!-- <p>{{ setCourseGoals() }}</p>
+        <p>Learn More <a v-bind:href='vueLink'>about Vue</a></p> -->
+        <div class="content"></div>
+        <button class="mx-5" v-on:click.left="showPopup">Add Goal</button>
+        <button class="mx-5" v-on:click.left="removeGoal">Remove Goal</button>
+        <div class="popup">
+            <h2>Add Goal</h2>
+            <input v-model="goal" placeholder="write your goal" />
+            <button v-on:click="addGoal">Done</button>
+        </div>
+        <p v-once>starting counter: {{counter}}</p>
+        <p>Results: {{counter}}</p>
+        <div class="">
+            <h2>Add your name</h2>
+            <input type="text" v-on:input="addName" v-on:keyup.enter="confirmName" placeholder="write your first name" />
+            <input type="text" v-model="lastName" placeholder="write your last name" />
+        </div>
+        <p>your Name: {{fullName}}</p>
+
+
+    </section>
+
+    <!-- scripts -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
